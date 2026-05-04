@@ -30,13 +30,35 @@ print(f"Maior numero é {menor}")
 
 #8. Faça um programa que leia 5 números e informe a soma e a média dos números.
 
+soma = 0
+media = 0
+
+for i in range(5):
+    numero = float(input(f"Digite o numero {i+1}: "))
+    soma += numero
+    media = soma / 5 
+
+print(f"Sua soma é: {soma}")
+print(f"Sua média é: {media}")
+
+
 #9. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+numero = 0
+
+for i in range(0,51):
+    if numero % 2 != 0:
+        print(i)
+
+
 
 #4. Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.
+
+
 
 #5. Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.
 
 #26. Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
+
 
 #31. O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e agora possui uma loja de conveniências. Faça um programa que implemente uma caixa registradora rudimentar. O programa deverá receber um número desconhecido de valores referentes aos preços das mercadorias. Um valor zero deve ser informado pelo operador para indicar o final da compra. O programa deve então mostrar o total da compra e perguntar o valor em dinheiro que o cliente forneceu, para então calcular e mostrar o valor do troco. Após esta operação, o programa deverá voltar ao ponto inicial, para registrar a próxima compra. A saída deve ser conforme o exemplo abaixo:
 
@@ -49,3 +71,20 @@ print(f"Maior numero é {menor}")
 # Dinheiro: R$ 20.00
 # Troco: R$ 11.00
 
+total = 0
+
+while True:
+
+    i = 1
+    preco_prod = float(input(f"Produto {i}: R$ "))
+    total += preco_prod
+
+    if preco_prod == 0:
+        print(f"Total: R$ {total}")
+              
+        dinheiro = float(input("Dinheiro: R$ "))
+        troco = dinheiro - total
+        print(f"Troco: R$ {troco}")
+        break
+    
+    i += 1
