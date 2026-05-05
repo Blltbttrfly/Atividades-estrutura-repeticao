@@ -1,0 +1,12 @@
+#2. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
+
+while True:
+    nome_de_usuario = input("Digite seu usuario: ")
+    senha = input("Digite sua senha: ")
+
+    if nome_de_usuario == senha:
+        print("ERRO: usuario e senha nao podem ser os mesmos.")
+        continue
+
+    print("Voce esta cadastrado!")
+    break
