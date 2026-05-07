@@ -5,7 +5,7 @@
 # 5! = 5 . 4 . 3 . 2 . 1 = 120
 import math
 fatorial = 1
-num = int(input("Digite um numero ara realizar fatoração: "))
+num = int(input("Digite um numero pra realizar fatoração: "))
 for i in range(1, num + 1):
     fatorial *= i
 
